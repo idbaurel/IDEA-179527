@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 (x64) (http://www.altova.com) by infodb (private) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.infodb.fr/teleservices/ws/dto/response" targetNamespace="http://www.infodb.fr/teleservices/ws/dto/response" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="IndividuResponseDTO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Individu">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="civilite" type="xs:string"/>
+							<xs:element name="nomUsuel" type="xs:string"/>
+							<xs:element name="nomNaissance" type="xs:string" minOccurs="0"/>
+							<xs:element name="prenom" type="xs:string"/>
+							<xs:element name="dateNaissance" type="xs:date"/>
+							<xs:element name="Contact">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="telephone" type="xs:string"/>
+										<xs:element name="mail" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Adresse">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="complementDestinataire" type="xs:string" minOccurs="0"/>
+										<xs:element name="numeroLieu" type="xs:string" minOccurs="0"/>
+										<xs:element name="natureLieu" type="xs:string" minOccurs="0"/>
+										<xs:element name="nomLieu" type="xs:string"/>
+										<xs:element name="complementLieu" type="xs:string" minOccurs="0"/>
+										<xs:element name="finLieu" type="xs:string" minOccurs="0"/>
+										<xs:element name="codePostal" type="xs:string" minOccurs="0"/>
+										<xs:element name="commune" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Tutelles">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Tutelle">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="typeTuteur" type="xs:string"/>
+													<xs:element name="tuteur" type="xs:string"/>
+													<xs:element name="mesureTutelle" type="xs:string"/>
+													<xs:element name="natureAccord" type="xs:string"/>
+													<xs:element name="dateEffetTutelle" type="xs:date"/>
+													<xs:element name="dateFinTutelle" type="xs:date"/>
+													<xs:element name="AdresseTuteur">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="numeroLieu" type="xs:string" minOccurs="0"/>
+																<xs:element name="natureLieu" type="xs:string" minOccurs="0"/>
+																<xs:element name="nomLieu" type="xs:string"/>
+																<xs:element name="complementLieu" type="xs:string" minOccurs="0"/>
+																<xs:element name="finLieu" type="xs:string" minOccurs="0"/>
+																<xs:element name="codePostal" type="xs:string" minOccurs="0"/>
+																<xs:element name="commune" type="xs:string"/>
+																<xs:element name="cedex" type="xs:string" minOccurs="0"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Apa">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="classotheque"/>
+										<xs:element name="centreAutonomie"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

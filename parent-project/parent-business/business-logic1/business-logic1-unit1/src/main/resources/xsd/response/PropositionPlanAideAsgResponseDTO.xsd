@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 (x64) (http://www.altova.com) by infodb (private) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.infodb.fr/teleservices/ws/dto/response" targetNamespace="http://www.infodb.fr/teleservices/ws/dto/response" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PropositionPlanAideAsgResponseDTO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DemandeAsg" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="typeAide" type="xs:string"/>
+							<xs:element name="natureAide" type="xs:string"/>
+							<xs:element name="dateDepot" type="xs:date"/>
+							<xs:element name="dateDebut" type="xs:date"/>
+							<xs:element name="dateFin" type="xs:date"/>
+							<xs:element name="dateDecision" type="xs:date"/>
+							<xs:element name="PlanAide">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="datePropositionPlan" type="xs:date"/>
+										<xs:element name="dateReponse" type="xs:date" minOccurs="0"/>
+										<xs:element name="avis" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="I"/>
+													<xs:enumeration value="A"/>
+													<xs:enumeration value="R"/>
+													<xs:enumeration value="E"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="commentaire" type="xs:string" minOccurs="0"/>
+										<xs:element name="PrestationsPlanAide">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PrestationPlanAide" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="nomenclaturePrestation" type="xs:string"/>
+																<xs:element name="quantite" type="xs:decimal" minOccurs="0"/>
+																<xs:element name="montantVerse" type="xs:decimal" minOccurs="0"/>
+																<xs:element name="nomTiers" type="xs:string" minOccurs="0"/>
+																<xs:element name="quantitatifTarif" type="xs:string" minOccurs="0"/>
+																<xs:element name="montantTarif" type="xs:decimal" minOccurs="0"/>
+																<xs:element name="typeTarif" type="xs:string" minOccurs="0"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

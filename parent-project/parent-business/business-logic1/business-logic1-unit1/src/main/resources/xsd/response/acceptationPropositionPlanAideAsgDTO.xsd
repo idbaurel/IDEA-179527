@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 (x64) (http://www.altova.com) by infodb (private) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="acceptationPropositionPlanAideAsgDTO">
+		<xs:annotation>
+			<xs:documentation>Objet principal</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="indexDemande" type="xs:long">
+					<xs:annotation>
+						<xs:documentation>Identifiant unique de la demande dans Solis</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dateReponse" type="xs:date">
+					<xs:annotation>
+						<xs:documentation>Date de validation en ligne du demandeur</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="reponseDemandeur" type="xs:boolean">
+					<xs:annotation>
+						<xs:documentation>Réponse du demandeur à la proposition du plan d'aide (true = Accord et false =
+                            refus)
+                        </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="commentaire" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Commentaire saisi par le demandeur</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

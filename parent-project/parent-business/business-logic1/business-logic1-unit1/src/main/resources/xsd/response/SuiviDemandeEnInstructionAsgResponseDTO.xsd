@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 (x64) (http://www.altova.com) by infodb (private) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.infodb.fr/teleservices/ws/dto/response" targetNamespace="http://www.infodb.fr/teleservices/ws/dto/response" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="SuiviDemandeEnInstructionAsgResponseDTO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DemandeAsg" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="typeAide" type="xs:string"/>
+							<xs:element name="natureAide" type="xs:string"/>
+							<xs:element name="dateArrivee" type="xs:date"/>
+							<xs:element name="dateDossierComplet" type="xs:date"/>
+							<xs:element name="dateDebut" type="xs:date"/>
+							<xs:element name="dateFin" type="xs:date"/>
+							<xs:element name="dateDecision" type="xs:date"/>
+							<xs:element name="décision" type="xs:string"/>
+							<!--<xs:element name="statutPortail" type="xs:string"/>-->
+							<xs:element name="Visite" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="date" type="xs:date"/>
+										<xs:element name="heure" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

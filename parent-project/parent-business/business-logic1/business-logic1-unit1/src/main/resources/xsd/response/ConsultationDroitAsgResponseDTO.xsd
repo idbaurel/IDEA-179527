@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 (x64) (http://www.altova.com) by infodb (private) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.infodb.fr/teleservices/ws/dto/response" targetNamespace="http://www.infodb.fr/teleservices/ws/dto/response" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ConsultationDroitAsgResponseDTO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DemandeAsg" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="typeAide" type="xs:string"/>
+							<xs:element name="natureAide" type="xs:string"/>
+							<xs:element name="dateDepot" type="xs:date"/>
+							<xs:element name="dateArrivee" type="xs:date"/>
+							<xs:element name="dateDossierComplet" type="xs:date"/>
+							<xs:element name="dateDebut" type="xs:date"/>
+							<xs:element name="dateFin" type="xs:date"/>
+							<xs:element name="dateDecision" type="xs:date"/>
+							<xs:element name="gir">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="type" type="xs:string"/>
+										<xs:element name="gir" type="xs:int"/>
+										<xs:element name="dateEvaluation" type="xs:date"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="IntervenantSocial" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="civilite" type="xs:string"/>
+										<xs:element name="nom" type="xs:string"/>
+										<xs:element name="prenom" type="xs:string"/>
+										<xs:element name="telephone" type="xs:string" minOccurs="0"/>
+										<xs:element name="mail" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PrestationAccordeeAsg" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="dateEffet" type="xs:date"/>
+										<xs:element name="dateFin" type="xs:date"/>
+										<xs:element name="nomenclaturePrestation" type="xs:string"/>
+										<xs:element name="montantAccorde" type="xs:decimal"/>
+										<xs:element name="montantParticipation" type="xs:decimal"/>
+										<xs:element name="montantVerse" type="xs:decimal"/>
+										<xs:element name="attributaire">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="type" type="xs:string"/>
+													<xs:element name="nom" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
